@@ -4,60 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maserati Product Catalog</title>
-    <!-- Import Font Futura alternatif yang resmi didukung Google Web Font (Century Gothic / Spartan) -->
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            /* Menerapkan font bergaya Futura geometri tajam */
             font-family: 'League Spartan', 'Futura', sans-serif;
             background-color: #0c0c0c;
             color: #ffffff;
             padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
         }
         .catalog-title {
             text-align: center;
             font-size: 28px;
             letter-spacing: 4px;
             text-transform: uppercase;
-            color: #800020; /* Warna Maroon */
-            margin-bottom: 50px;
+            color: #800020; /* Maroon */
+            margin-bottom: 30px;
             font-weight: 700;
         }
-        
-        /* Grid Gambar Produk Transparan */
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 30px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        .product-card {
-            background-color: transparent; /* Transparan penuh */
-            border: 1px solid #1a1a1a;
-            padding: 20px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        .product-card:hover {
-            border-color: #800020; /* Border berubah maroon saat hover */
-            background-color: rgba(128, 0, 32, 0.05); /* Sedikit kilau maroon transparan */
-        }
-        .product-card img {
+        /* Kontainer Iframe untuk Canva */
+        .canva-embed-container {
+            position: relative;
             width: 100%;
-            height: 220px;
-            object-fit: contain;
-            background: transparent; /* Pastikan background gambar transparan */
-            margin-bottom: 15px;
+            max-width: 900px;
+            aspect-ratio: 16/9; /* Sesuaikan dengan rasio desain Canva Anda (misal 16:9 atau 1:1) */
+            border: 1px solid #800020;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(128, 0, 32, 0.15);
         }
-        .product-name {
-            font-size: 16px;
-            font-weight: 600;
-            color: #800020; /* Tulisan Nama Produk Warna Maroon */
+        .canva-embed-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .catalog-footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #800020;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 10px;
+            letter-spacing: 2px;
         }
     </style>
 </head>
@@ -65,38 +58,13 @@
 
     <h1 class="catalog-title">Maserati Collection Catalog</h1>
 
-    <div class="product-grid">
-        <!-- Item 1 -->
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=300" alt="Maserati Potenza">
-            <p class="product-name">Maserati Potenza Automatic</p>
-        </div>
-        <!-- Item 2 -->
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?q=80&w=300" alt="Maserati Traguardo">
-            <p class="product-name">Maserati Traguardo Chronograph</p>
-        </div>
-        <!-- Item 3 -->
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?q=80&w=300" alt="Maserati Successo">
-            <p class="product-name">Maserati Successo Dark</p>
-        </div>
-        <!-- Item 4 -->
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?q=80&w=300" alt="Maserati Sfida">
-            <p class="product-name">Maserati Sfida Gold Edition</p>
-        </div>
-        <!-- Item 5 -->
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1539874754764-5a96559165b0?q=80&w=300" alt="Maserati Competizione">
-            <p class="product-name">Maserati Competizione Silver</p>
-        </div>
-        <!-- Item 6 -->
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1619134778706-7015533a6150?q=80&w=300" alt="Maserati Epoca">
-            <p class="product-name">Maserati Epoca Classic</p>
-        </div>
+    <!-- Area Embed Canva -->
+    <div class="canva-embed-container">
+        <!-- Taruh KODE EMBED (Bukan Link Biasa) dari Canva di bawah ini -->
+        <iframe loading="lazy" src="https://www.canva.com/design/DAHPbUg6X8g/mNQH5AX6h38QYO-KstHP5A/view" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
     </div>
+
+    <div class="catalog-footer">Elite International Exclusive Gallery</div>
 
 </body>
 </html>
