@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maserati - Brand Showcase</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0c0c0c;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        .btn-back { display: inline-block; color: #c5a880; text-decoration: none; font-size: 13px; font-weight: 600; margin-bottom: 20px; letter-spacing: 1px; }
+        
+        /* 1. Image Banner */
+        .brand-banner { width: 100%; height: 350px; background-color: #1a1a1a; border-radius: 8px; margin-bottom: 30px; display: flex; align-items: center; justify-content: center; overflow: hidden; border: 1px solid #222; }
+        .brand-banner img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* 2. Deskripsi Singkat */
+        .brand-desc-short { text-align: center; max-width: 700px; margin: 0 auto 50px auto; font-size: 16px; color: #ccc; }
+
+        /* 3. Sliding Product Highlight (10 Products Loop) */
+        .slider-title { font-size: 18px; text-transform: uppercase; color: #c5a880; letter-spacing: 2px; margin-bottom: 20px; text-align: center; }
+        .slider-container { width: 100%; overflow: hidden; background: #121212; padding: 20px 0; border-top: 1px solid #222; border-bottom: 1px solid #222; margin-bottom: 60px; }
+        .slider-track { display: flex; width: calc(240px * 20); animation: scroll 25s linear infinite; }
+        .slider-item { width: 220px; height: 280px; background: #1a1a1a; margin: 0 10px; border-radius: 6px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 15px; border: 1px solid #2b2b2b; }
+        .slider-item img { width: 100%; height: 180px; object-fit: contain; margin-bottom: 10px; }
+        .slider-item p { font-size: 14px; text-align: center; color: #fff; font-weight: 600; }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-240px * 10)); }
+        }
+
+        /* 4. Zig-zag Gallery Section (Ratio 4:5 / 1:1) */
+        .zigzag-section { display: flex; flex-direction: column; gap: 40px; margin-bottom: 60px; }
+        .zigzag-row { display: flex; align-items: center; gap: 40px; }
+        .zigzag-row.reverse { flex-direction: row-reverse; }
+        .zigzag-image { flex: 1; aspect-ratio: 4/5; background-color: #1a1a1a; border-radius: 8px; overflow: hidden; border: 1px solid #222; }
+        .zigzag-image.square { aspect-ratio: 1/1; }
+        .zigzag-image img { width: 100%; height: 100%; object-fit: cover; }
+        .zigzag-text { flex: 1; }
+        .zigzag-text h3 { font-size: 20px; color: #c5a880; margin-bottom: 15px; text-transform: uppercase; }
+        .zigzag-text p { color: #aaa; font-size: 15px; }
+
+        /* 5. Learn More Button */
+        .learn-more-container { text-align: center; padding: 40px 0; }
+        .btn-learn-more { display: inline-block; background-color: transparent; color: #c5a880; border: 2px solid #c5a880; padding: 12px 35px; font-size: 14px; font-weight: 700; text-decoration: none; letter-spacing: 2px; text-transform: uppercase; border-radius: 4px; transition: 0.3s; }
+        .btn-learn-more:hover { background-color: #c5a880; color: #000; }
+
+        @media (max-width: 768px) {
+            .zigzag-row, .zigzag-row.reverse { flex-direction: column; text-align: center; gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="btn-back">&larr; KEMBALI KE UNDANGAN UTAMA</a>
+
+        <!-- 1. Image Banner -->
+        <div class="brand-banner">
+            <!-- Ganti src dengan link gambar banner asli Anda -->
+            <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=1000" alt="Maserati Banner">
+        </div>
+
+        <!-- 2. Deskripsi Singkat -->
+        <div class="brand-desc-short">
+            <p>Maserati Timepieces menghadirkan perpaduan sempurna antara kemewahan otomotif Italia dengan presisi mekanis jam tangan premium tingkat tinggi kelas dunia.</p>
+        </div>
+
+        <!-- 3. Sliding Product Highlight (10 Produk) -->
+        <h2 class="slider-title">Koleksi Terpopuler</h2>
+        <div class="slider-container">
+            <div class="slider-track">
+                <!-- 10 Produk Pertama -->
+                <div class="slider-item"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=300" alt="Produk 1"><p>Maserati Potenza A</p></div>
+                <div class="slider-item"><img src="https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?q=80&w=300" alt="Produk 2"><p>Maserati Traguardo</p></div>
+                <div class="slider-item"><img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?q=80&w=300" alt="Produk 3"><p>Maserati Successo</p></div>
+                <div class="slider-item"><img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?q=80&w=300" alt="Produk 4"><p>Maserati Sfida</p></div>
+                <div class="slider-item"><img src="https://images.unsplash.com/photo-1539874754764-5a96559165b0?q=80&w=300" alt="Produk 5"><p>Maserati Competizione</p></div>
+                <div class="slider-item"><img src="https://images.unsplash.com/photo-1619134778706-7015533a6150?q=80&w=300" alt="Produk 6"><p>Maserati Epoca</p></div>
+                <div class="slider-item"><img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?q=80&w=300" alt="Produk 7"><p>Maserati Ricordo</p></div>
+                <div class="slider-item"><img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?q=80&w=300" alt="Produk 8"><p>Maserati GT limited</p></div>
+                <div class="slider-item"><img src="https://images.unsplash.com/photo-1585123334904-845d60e97b29?q=80&w=300" alt="Produk 9"><p>Maserati Sorpasso</p></div>
+                <div class="slider-item"><img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?q=80&w=300" alt="Produk 10"><p>Maserati Stile</p></div>
+                
+                <!-- Duplicate 10 Produk untuk efek Infinite loop lancar -->
+                <div class="slider-item"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=300" alt="Produk 1"><p>Maserati Potenza A</p></div>
+                <div class="slider-item"><img src="https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?q=80&w=300" alt="Produk 2"><p>Maserati Traguardo</p></div>
+                <div class="slider-item"><img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?q=80&w=300" alt="Produk 3"><p>Maserati Successo</p></div>
+                <div class="slider-item"><img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?q=80&w=300" alt="Produk 4"><p>Maserati Sfida</p></div>
+                <div class="slider-item"><img src="https://images.unsplash.com/photo-1539874754764-5a96559165b0?q=80&w=300" alt="Produk 5"><p>Maserati Competizione</p></div>
+                <div class="slider-item"><img src="https://images.unsplash.com/photo-1619134778706-7015533a6150?q=80&w=300" alt="Produk 6"><p>Maserati Epoca</p></div>
+                <div class="slider-item"><img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?q=80&w=300" alt="Produk 7"><p>Maserati Ricordo</p></div>
+                <div class="slider-item"><img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?q=80&w=300" alt="Produk 8"><p>Maserati GT limited</p></div>
+                <div class="slider-item"><img src="https://images.unsplash.com/photo-1585123334904-845d60e97b29?q=80&w=300" alt="Produk 9"><p>Maserati Sorpasso</p></div>
+                <div class="slider-item"><img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?q=80&w=300" alt="Produk 10"><p>Maserati Stile</p></div>
+            </div>
+        </div>
+
+        <!-- 4. Zig-zag Gallery Section -->
+        <div class="zigzag-section">
+            <!-- Baris 1: Gambar Kiri (Rasio 4:5), Deskripsi Kanan -->
+            <div class="zigzag-row">
+                <div class="zigzag-image">
+                    <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=500" alt="Detail Craftsmanship">
+                </div>
+                <div class="zigzag-text">
+                    <h3>Craftsmanship Premium</h3>
+                    <p>Setiap detail pahatan pada dial dan bezel mencerminkan lekukan aerodinamis khas mobil sport sport premium, menyajikan kemewahan yang langsung terasa di pergelangan tangan Anda.</p>
+                </div>
+            </div>
+
+            <!-- Baris 2: Deskripsi Kiri, Gambar Kanan (Rasio 1:1 / Kotak) -->
+            <div class="zigzag-row reverse">
+                <div class="zigzag-image square">
+                    <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?q=80&w=500" alt="Exclusive Movement">
+                </div>
+                <div class="zigzag-text">
+                    <h3>Performa Akurat</h3>
+                    <p>Didukung oleh mesin automatic movement andalan yang tahan lama, jam tangan ini memastikan ketepatan waktu mutlak bagi para profesional yang menghargai setiap detik momentum bisnis mereka.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. Learn More Button (Membuka Page Baru) -->
+        <div class="learn-more-container">
+            <a href="maserati-catalog.html" target="_blank" class="btn-learn-more">Learn More</a>
+        </div>
+    </div>
+
+</body>
+</html>
